@@ -1,0 +1,14 @@
+<div class="mt-5 border border-dark rounded border-2
+d-flex flex-column justify-content-center align-items-center cs-container"
+[ngClass]="screenWidth < 768 ? 'cs-container-md' : 'cs-container-xxl'">
+  <h2 class="mb-3">
+    Inicio de Sesión
+  </h2>
+  <div class="cs-container-inputs" [ngClass]="screenWidth < 768 ? 'd-flex flex-column text-center' : 'cs-inputs-grid text-end'">
+    <label>Correo</label>
+    <input class="cs-input mt-2 mb-2" type="email" id="">
+    <label>Contraseña</label>
+    <input class="cs-input mt-2" type="password">
+  </div>
+  <button class="btn btn-success m-3" type="button">Iniciar</button>
+</div>

@@ -1,0 +1,27 @@
+.cs-container {
+  height: 45vh;
+  margin-inline: auto;
+  box-shadow: 10px 20px 30px black;
+}
+.cs-container-md {
+  width: 95vw;
+}
+.cs-container-xxl {
+  width: 60vw;
+}
+.cs-container-inputs {
+  width: 80%;
+  font-size: 18px;
+}
+.cs-inputs-grid {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  column-gap: 5%;
+}
+.cs-inputs-grid label {
+  margin-block: auto;
+}
+.cs-container-inputs .cs-input {
+  font-size: 17px;
+  padding-left: 5px;
+}

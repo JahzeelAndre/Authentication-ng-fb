@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "boutiques-iguala": {
+      "hosting": {
+        "BoutiquesIguala": [
+          "boutiques-iguala"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "boutiques-iguala"
+  }
+}
