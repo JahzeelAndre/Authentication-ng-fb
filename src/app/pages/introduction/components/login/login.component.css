@@ -25,3 +25,14 @@
   font-size: 17px;
   padding-left: 5px;
 }
+.cs-container-inputs-xxl {
+  width: 100%;
+  display: flex;
+}
+.cs-container-inputs-xxl input {
+  width: 65%;
+}
+.cs-container-inputs-xxl small {
+  width: 30%;
+}
+

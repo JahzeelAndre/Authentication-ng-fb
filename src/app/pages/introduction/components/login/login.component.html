@@ -4,11 +4,21 @@ d-flex flex-column justify-content-center align-items-center cs-container"
   <h2 class="mb-3">
     Inicio de Sesión
   </h2>
-  <div class="cs-container-inputs" [ngClass]="screenWidth < 768 ? 'd-flex flex-column text-center' : 'cs-inputs-grid text-end'">
-    <label>Correo</label>
-    <input class="cs-input mt-2 mb-2" type="email" id="">
-    <label>Contraseña</label>
-    <input class="cs-input mt-2" type="password">
+  <div class="cs-container-inputs" [ngClass]="screenWidth < 768 ? 'd-flex flex-column text-center' : 'cs-inputs-grid'">
+    <label [ngClass]="screenWidth < 768 ? '' : 'text-end'">Correo</label>
+    <div class="cs-container-inputs-xxl">
+      <input [formControl]="emailControl" class="cs-input mt-2 mb-2" type="email">
+      <small *ngIf="this.emailControl.invalid" class="text-danger m-auto">Es requerido</small>
+    </div>
+
+    <label [ngClass]="screenWidth < 768 ? '' : 'text-end'">Contraseña</label>
+    <div class="cs-container-inputs-xxl">
+      <input [formControl]="passwordControl" class="cs-input mt-2" type="password">
+      <small *ngIf="this.passwordControl.errors?.['required']" class="text-danger m-auto">Es requerido</small>
+      <small *ngIf="this.passwordControl.errors?.['minlength']" class="text-danger m-auto">Mínimo 6 dígitos</small>
+    </div>
   </div>
-  <button class="btn btn-success m-3" type="button">Iniciar</button>
+  <button (click)="login()" [disabled]="this.emailControl.invalid || this.passwordControl.invalid" class="btn btn-success m-3" type="button">Iniciar</button>
 </div>
+
+
